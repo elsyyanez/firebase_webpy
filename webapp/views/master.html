@@ -1,0 +1,76 @@
+$def with (content)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi WebApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .barra-superior {
+            background-color: purple;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            background-color: darkviolet;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="barra-superior">
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/lista_personas">Personas</a>
+        </div>
+    </div>
+
+    <div class="container">
+        $:content
+    </div>
+
+</body>
+</html>
