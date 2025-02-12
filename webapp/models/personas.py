@@ -3,7 +3,7 @@ import pyrebase
 config = {
   "apiKey": "AIzaSyCNzz_InZ3JOIKr0I9b3lfXDiaJTEAoHYE",
   "authDomain": "bdnube-38ec9.firebaseapp.com",
-  "databaseURL": "https://bdnube-38ec9-default-rtdb.firebaseio.com",
+  "databaseURL": "https://bdnube-38ec9-default-rtdb.firebaseio.comm",
   "storageBucket": "bdnube-38ec9.firebasestorage.app"
 }
 
