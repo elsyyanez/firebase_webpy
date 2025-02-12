@@ -12,4 +12,7 @@ urls = (
 app = web.application(urls, globals())
 
 if __name__ == "__main__":
-    app.run()
+    try:
+        app.run()
+    except Exception as error:
+        print(f"ERROR: {str(error)}")
