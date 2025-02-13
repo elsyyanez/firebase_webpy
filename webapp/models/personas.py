@@ -3,7 +3,7 @@ import pyrebase
 config = {
   "apiKey": "AIzaSyCNzz_InZ3JOIKr0I9b3lfXDiaJTEAoHYE",
   "authDomain": "bdnube-38ec9.firebaseapp.com",
-  "databaseURL": "https://bdnube-38ec9-default-rtdb.firebaseio.comm",
+  "databaseURL": "https://bdnube-38ec9-default-rtdb.firebaseio.com",
   "storageBucket": "bdnube-38ec9.firebasestorage.app"
 }
 
@@ -30,7 +30,6 @@ class Personas:
                 "message": "Error en el servidor",
                 "personas": {}
             }
-            return response  # Se corrigió la indentación
-
-persona = Personas()
-print(f"{persona.lista_personas()}")
+            return response  
+#persona = Personas()
+#print(f"{persona.lista_personas()}")
