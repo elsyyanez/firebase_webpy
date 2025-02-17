@@ -27,4 +27,4 @@ class ListaPersonas:
                 "message": "Error en el servidor",
                 "personas": {}
             }
-            return response  
+            return response
