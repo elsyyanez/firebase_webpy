@@ -1,4 +1,7 @@
+from flask import Flask, render_template
 import pyrebase
+
+app = Flask(__name__)
 
 config = {
   "apiKey": "AIzaSyCNzz_InZ3JOIKr0I9b3lfXDiaJTEAoHYE",
@@ -31,5 +34,14 @@ class Personas:
                 "personas": {}
             }
             return response  
+
+@app.route("/lista_personas")
+def lista_personas():
+    persona = Personas()
+    personas = persona.lista_personas()
+    return render_template("lista_personas.html", personas=personas)
+
+if __name__ == "__main__":
+    app.run(debug=True)
 #persona = Personas()
 #print(f"{persona.lista_personas()}")
