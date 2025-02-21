@@ -8,9 +8,10 @@ class ListaPersonas:
     def GET(self):
         try:
             personas = Personas()
-            print(f"{personas.lista_personas()}")  # Muestra la lista en consola
+            datos = personas.lista_personas() # Guarda en datos de la base de datos firebase
+            #print(f"{personas.lista_personas()}")  # Muestra la lista en consola
             
-            return render.lista_personas()  # ✅ Se corrigió el typo
+            return render.lista_personas(datos)  # Envia la variable datos a la vista lista_personas.html
         
         except Exception as error:
             message = {"error": str(error)}  # 🔍 Convertir el error en cadena para depuración
