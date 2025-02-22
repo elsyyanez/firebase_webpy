@@ -1,15 +1,21 @@
 $def with (datos)
-$datos
+
     <h1>Lista de Personas</h1>
     <table border="1">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Nombre</th>
-                <th>Edad</th>
-                <th>Correo</th>
+                <th>Telefono</th>
             </tr>
         </thead>
         <tbody>
+            $for key, persona in datos.items():
+            <tr>
+                
+            </tr>
             
+                
         </tbody>
+    
     </table>

@@ -1,4 +1,5 @@
 import web
+import json
 from models.personas import Personas
 
 # Asegúrate de que la ruta de "views/personas" es la correcta
@@ -10,7 +11,10 @@ class ListaPersonas:
             personas = Personas()
             datos = personas.lista_personas() # Guarda en datos de la base de datos firebase
             #print(f"{personas.lista_personas()}")  # Muestra la lista en consola
-            
+            json_output = json.dumps(datos, indent=4, ensure_ascii=False) # Convertir los datos a formato json
+
+            #print(json_output)# Imprimir en consola
+
             return render.lista_personas(datos)  # Envia la variable datos a la vista lista_personas.html
         
         except Exception as error:
